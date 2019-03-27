@@ -1,0 +1,16 @@
+<div>{{height}}</div>
+<div #container class="editor-container">
+
+  <div class="overlay-container" [style.height]="height">
+  </div>
+
+  <pdf-viewer id="viewer"
+    [src]="src"
+    [original-size]="false"
+    [autoresize]="true"
+    (after-load-complete)="updateSize($event)"
+
+    style="display: block;">
+  </pdf-viewer>
+
+</div>
